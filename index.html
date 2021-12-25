@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="p5.min.js"></script>
+      <script src="p5.sound.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <style>
+            html, body {
+              height: 100%;
+            }
+
+            body {
+              background-color: black;
+              margin: 0;
+              display: flex;
+
+              justify-content: center;
+
+              align-items: center;
+              color: white;
+            }
+            #control{
+              display: flex;
+              flex-direction: column;
+            }
+
+      </style>
+    <div id="control">
+    <div>
+        <input type="color" id="body" name="body"
+                value="#0000c8">
+        <label for="body">Colour</label>
+    </div>
+    <br/>
+    <div>
+      <input type="checkbox" id="fractaltree" name="fractaltree"
+             checked>
+      <label for="fractaltree">Remove fractal tree CUZ IT LAGSSS<br>(or keep it cuz it looks cool :3 )</label>
+    </div>
+  </div>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>

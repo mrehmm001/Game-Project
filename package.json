@@ -1,0 +1,16 @@
+{
+  "name": "gameproject",
+  "version": "1.0.0",
+  "description": "Okay we have most of the aspects of our side-scrolling game covered so now it's time to bring all of these elements together. We're going to be doing a lot of cutting and pasting here, but do it carefully and test at the end of each stage.",
+  "main": "gameChar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "socket.io": "^4.4.0"
+  }
+}
