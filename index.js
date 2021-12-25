@@ -1,3 +1,4 @@
+const { env } = require("process");
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -22,6 +23,6 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3000, () => {
+server.listen(process.env.PORT||8000, () => {
   console.log('listening on *:3000');
 });
