@@ -204,12 +204,15 @@ function draw()
     //constructor(x,y,moveLeft,moveRight,jumping)
     socket.emit("renderPlayer",{ID:hash,x:gameChar_x-scrollPos,y:gameChar_y,isMovingLeft:isLeft,isMovingRight:isRight,isJumping:isFalling,shirtColour:colour});
     socket.on("renderPlayers",({ID,x,y,isMovingLeft,isMovingRight,isJumping,shirtColour})=>{
-        onlinePlayers[ID] = new gameChar(x,y,isMovingLeft,isMovingRight,isJumping,shirtColour);
+        onlinePlayers[ID] = {x:x,y:y,isMovingLeft:isMovingLeft,isMovingRight:isMovingRight,isJumping:isJumping,shirtColour:shirtColour};
     })
+
     for(let player in onlinePlayers){
-        onlinePlayers[player].charX+=scrollPos;
-        onlinePlayers[player].renderCharacter();
+        let {x,y,isMovingLeft,isMovingRight,isJumping,shirtColour} = onlinePlayers[player];
+        onlinePlayer = new gameChar(x+scrollPos,y,isMovingLeft,isMovingRight,isJumping,shirtColour);
+        onlinePlayer.renderCharacter();
     }
+
 
     socket.on("clearAllPlayers",()=>{
         onlinePlayers={};

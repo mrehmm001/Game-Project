@@ -1,4 +1,4 @@
-export class gameChar{
+class gameChar{
     constructor(x,y,moveLeft,moveRight,jumpRight,jumpLeft,standing,jumpingFacingForward){
         this.charX =x;
         this.charY =y;
